@@ -1,0 +1,49 @@
+{
+  "name": "custom_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development",
+    "build": "webpack --mode production",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": false,
+    "testRegex": "(/tests/.*(test|spec))\\.js?$",
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@odoo/owl": "^2.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "babel-jest": "^30.0.0-beta.3",
+    "babel-loader": "^10.0.0",
+    "html-webpack-plugin": "^5.6.3",
+    "jest": "^29.7.0",
+    "regenerator-runtime": "^0.13.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1"
+  },
+  "plugins": [
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+}
